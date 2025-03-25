@@ -1,4 +1,7 @@
+<html>
 <head>
+  <title>Vulture Mountains</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <style>
      /* menu stuff -- Idk if I'll keep */
     body{background-color: #b8b2a9;}
@@ -11,8 +14,8 @@
       margin-top: 20px;
       margin-bottom: 20px;
     }
-     .info {color: hsl(25, 10%, 18%); text-align: center; margin:20px;}
-    div {
+     .info {color: hsl(25, 10%, 18%); text-align: center; margin: 20px;}
+    .div {
   max-width: 100%;
   border: 15px solid  hsla(86, 33%, 24%, 0.30);
   padding: 20px;
@@ -20,18 +23,204 @@
   margin-left: 70px;
   margin-right: 70px;
   margin-bottom: 95px;
-  background:  hsla(86, 33%, 24%, 0.25);
+  background: hsla(86, 33%, 24%, 0.25);
  
 }
-  </style>
-  <title>
-  Vulture Mountains
-  </title>
-</head>
-<body>  
+  .header { margin-top: 30px; margin-bottom: 0px; overflow: hidden; font-size: 12px; float: center; }
+		    .title { color: hsl(26, 80%, 13%); text-align:center; }
+		    .map { max-width: 20%; height: auto; }
+
+				#Table_01 { border:0; border-collapse:collapse; margin:0; padding:0; width: 100%; height: auto; max-width: 100%; max-height: 100%; background:url('images/SteampunkMap2.png'); background-repeat: no-repeat; background-position: center; background-size: 100%; border-spacing:0; display: table; }
+				#map { display:block; padding:20px; }
+				#Table_01 tr td { vertical-align: top; border:0; padding:0; }
+				img.mapImage { width:auto; height: auto; max-width:100%; max-height: 100%; border:0; display:block;}
+				table.tr-table { width: 100%; max-width: 100%; max-height:100%; border:0; border-collapse: collapse; border-spacing:0; padding:0; margin:0; display: table;}
+				table.tr-table tr td { padding:0; margin:0; }
+				.submenu {  position: absolute; bottom: 0; left: 0; background-color: #c4c4c4; padding: 10px; width: 100%; max-width: 90%; }
+				a.hidden-link { cursor: default; }
+			  @media (max-width: 400px) {
+				    .menu { flex-direction: column; align-items: center; }
+				  }
+
+				/* Add a black background color to the top navigation */
+				.topnav {
+				  background-color:hsla(86, 33%, 24%, 0.46);
+				  overflow: hidden;
+				}
+
+				/* Style the links inside the navigation bar */
+				.topnav a {
+				  float: left;
+				  display: block;
+					font-family: sans-serif;		  
+				  color: hsl(29, 52%, 19%);
+				  text-align: center;
+				  padding: 20px 25px;
+				  text-decoration: none;
+				  font-size: 24px;
+				  text-decoration: none;
+				}
+
+				/* Add an active class to highlight the current page */
+				.active {
+				  color: hsl(29, 30%, 70%); 
+				  background-color: hsla(86, 33%, 24%, 0.46); 
+				}
+
+				/* Hide the link that should open and close the topnav on small screens */
+				.topnav .icon {
+				  display: none;
+				}
+
+				/* Dropdown container - needed to position the dropdown content */
+				.dropdown {
+				  float: left;
+				  overflow: hidden;
+				}
+
+				/* Style the dropdown button to fit inside the topnav */
+				.dropdown .dropbtn {
+				  font-size: 24px;
+				  border: none;
+				  outline: none;
+				  color: hsl(29, 52%, 19%);
+				  padding: 20px 25px;
+				  margin: 0;
+				  background-color: inherit;
+				}
+
+				/* Style the dropdown content (hidden by default) */
+				.dropdown-content {
+				  display: none;
+				  position: absolute;
+				  background-color: #d2cec7;
+				  min-width: 160px;
+				  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+				  z-index: 1;
+				}
+
+				/* Style the links inside the dropdown */
+				.dropdown-content a {
+				  float: none;
+				  color: black;
+				  padding: 12px 16px;
+				  text-decoration: none;
+				  display: block;
+				  text-align: left;
+				}
+
+				/* Add a dark background on topnav links and the dropdown button on hover */
+				.topnav a:hover, .dropdown:hover .dropbtn {
+					color: hsl(29, 30%, 70%); background-color: hsla(86, 33%, 24%, 0.46); 
+
+				}
+
+				/* Add a grey background to dropdown links on hover */
+				.dropdown-content a:hover {
+				  background-color: #ddd;
+				  color: black;
+				}
+
+				/* Show the dropdown menu when the user moves the mouse over the dropdown button */
+				.dropdown:hover .dropdown-content {
+				  display: block;
+				}
+
+				/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+				@media screen and (max-width: 600px) {
+				  .topnav a:not(:first-child), .dropdown .dropbtn {
+				    display: none;
+				  }
+				  .topnav a.icon {
+				    float: right;
+				    display: block;
+				  }
+				}
+
+				/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+				@media screen and (max-width: 600px) {
+				  .topnav.responsive {position: relative;}
+				  .topnav.responsive a.icon {
+				    position: absolute;
+				    right: 0;
+				    top: 0;
+				  }
+				  .topnav.responsive a {
+				    float: none;
+				    display: block;
+				    text-align: left;
+				  }
+				  .topnav.responsive .dropdown {float: none;}
+				  .topnav.responsive .dropdown-content {position: relative;}
+				  .topnav.responsive .dropdown .dropbtn {
+				    display: block;
+				    width: 100%;
+				    text-align: left;
+				  }
+				}
+		  </style>
+		  <script type="text/javascript">
+				/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+				function myFunction() {
+				  var x = document.getElementById("myTopnav");
+				  if (x.className === "topnav") {
+				    x.className += " responsive";
+				  } else {
+				    x.className = "topnav";
+				  }
+				}
+		  </script>
+
+  	</head>
+		<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+			<!--START: TOP NAVIGATION-->
+			<div class="topnav" id="myTopnav">
+			  <a href="/Atomos-Map/">World Map</a>
+			  <div class="dropdown">
+			    <button class="dropbtn">Locations
+			      <i class="fa fa-caret-down"></i>
+			    </button>
+			    <div class="dropdown-content">
+			      <a href="/Argon/">Argon</a>
+			      <a href="/Arjia-Desert/">Arjia Desert</a>
+			      <a href="/Bushings/">Bushings</a>
+			      <a href="/Detent/">Detent</a>
+			      <a href="/Hypodt/">Hypodt</a>
+			      <a href="/Miter/">Miter</a>
+			      <a href="/Moline/">Moline</a>
+			      <a href="/Notos-Plains/">Notos Plains</a>
+			      <a href="/Ollitas-Woods/">Ollitas Woods</a>
+			      <a href="/Pinion/">Pinion</a>
+			      <a href="/Purgos-Valley/">Purgos Valley</a>
+			      <a href="/Voreios/">Voreios</a>
+			      <a href="/Vulture-Mountains/">Vulture Mountains</a>
+			    </div>
+			  </div>
+			  <div class="dropdown">
+			    <button class="dropbtn">Characters
+			      <i class="fa fa-caret-down"></i>
+			    </button>
+			    <div class="dropdown-content">
+			      <a href="/Barbara/">Barbara</a>
+			      <a href="/Beck/">Beck</a>
+			      <a href="/Emily/">Emily</a>
+			      <a href="/Gatrishia/">Gatrishia</a>
+			      <a href="/Kurt/">Kurt</a>
+			      <a href="/Ream/">Ream</a>
+			      <a href="/Lola/">Lola</a>
+			      <a href="/Lucien/">Lucien</a>
+			      <a href="/Poppy/">Poppy</a>
+			      <a href="/Quillion/">Quillion</a>
+			    </div>
+			  </div>
+			  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+			</div>
+			<!--END: TOP NAVIGATION-->
+      
   <img class="img" src="Mtns.jpg" alt="description of image">
   <h1 class="title"> Vulture Mountains </h1>
-  <div>
+  <div class="div">
    <h4 class="info">
    One side of these mountains extremely dry and barren while the other is full of trees and wildlife.
   <br>
@@ -40,8 +229,8 @@
      <br>
   <br>  
      Vultures picking at the bones of past travelers is a common sight. They say when you enter these birds will circle above waiting for the moment you drop to the ground, dead or alive, they will feast.
+    </h4>
         
   </div>
-  
-  
 </body>
+ </html>
